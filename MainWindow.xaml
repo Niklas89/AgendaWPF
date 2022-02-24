@@ -1,0 +1,32 @@
+﻿<Window x:Class="AgendaWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AgendaWPF"
+        mc:Ignorable="d"
+        Title="Agenda LaManu" FontSize="14" Height="600" Width="800">
+    <Grid Margin="20 10" x:Name="GridMainWindow" MaxWidth="750">
+        <Menu Height="50" Name="menu1" HorizontalAlignment="Center" VerticalAlignment="Top" Width="750" Background="Aqua">
+            <Menu.BitmapEffect>
+                <DropShadowBitmapEffect />
+            </Menu.BitmapEffect>
+            <MenuItem Header="Clients" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,15,0,0" FontWeight="Bold">
+                <MenuItem Header="Ajouter" IsCheckable="false" Click="AddCustomer_Click">
+                    <MenuItem.ToolTip>
+                        <ToolTip>Ajouter un client</ToolTip>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+                <MenuItem Header="Liste" IsCheckable="false">
+                    <MenuItem.ToolTip>
+                        <ToolTip>Liste des clients</ToolTip>
+                    </MenuItem.ToolTip>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+        <Frame Name="MainFrame" Content="Bienvenue sue l'agenda de La Manu" Margin="0,60,0,0" Width="750" Height="550" FontWeight="Normal"/>
+
+
+
+    </Grid>
+</Window>

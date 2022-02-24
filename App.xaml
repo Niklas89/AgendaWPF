@@ -1,0 +1,21 @@
+﻿<Application x:Class="AgendaWPF.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:AgendaWPF"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Padding" Value="5 2" />
+        </Style>
+
+        <Style TargetType="TextBox">
+            <Setter Property="Padding" Value="2" />
+        </Style>
+
+        <Style TargetType="TextBlock" x:Key="Header">
+            <Setter Property="FontSize" Value="24" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Margin" Value="0 5 0 5" />
+        </Style>
+    </Application.Resources>
+</Application>
