@@ -54,3 +54,13 @@ C:\Users\utilisateur\source\repos\WPF\AgendaWPF\obj\Debug\net6.0-windows\AgendaW
 C:\Users\utilisateur\source\repos\WPF\AgendaWPF\obj\Debug\net6.0-windows\Views\addCustomer.g.cs
 C:\Users\utilisateur\source\repos\WPF\AgendaWPF\obj\Debug\net6.0-windows\Views\addCustomer.baml
 C:\Users\utilisateur\source\repos\WPF\AgendaWPF\obj\Debug\net6.0-windows\App.baml
+C:\Users\utilisateur\source\repos\WPF\AgendaWPF\obj\Debug\net6.0-windows\Views\CustomersList.g.cs
+C:\Users\utilisateur\source\repos\WPF\AgendaWPF\obj\Debug\net6.0-windows\Views\CustomersList.baml
+C:\Users\utilisateur\source\repos\WPF\AgendaWPF\obj\Debug\net6.0-windows\Views\AddBroker.g.cs
+C:\Users\utilisateur\source\repos\WPF\AgendaWPF\obj\Debug\net6.0-windows\Views\BrokersList.g.cs
+C:\Users\utilisateur\source\repos\WPF\AgendaWPF\obj\Debug\net6.0-windows\Views\AddBroker.baml
+C:\Users\utilisateur\source\repos\WPF\AgendaWPF\obj\Debug\net6.0-windows\Views\BrokersList.baml
+C:\Users\utilisateur\source\repos\WPF\AgendaWPF\obj\Debug\net6.0-windows\Views\AddAppointment.g.cs
+C:\Users\utilisateur\source\repos\WPF\AgendaWPF\obj\Debug\net6.0-windows\Views\AppointmentsList.g.cs
+C:\Users\utilisateur\source\repos\WPF\AgendaWPF\obj\Debug\net6.0-windows\Views\AddAppointment.baml
+C:\Users\utilisateur\source\repos\WPF\AgendaWPF\obj\Debug\net6.0-windows\Views\AppointmentsList.baml

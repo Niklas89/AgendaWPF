@@ -16,4 +16,16 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Resource Include="Images\VerticalPin.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\HorizontalPin.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
 </Project>

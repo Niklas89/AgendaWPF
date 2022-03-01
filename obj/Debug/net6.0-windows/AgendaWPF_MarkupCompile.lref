@@ -1,5 +1,10 @@
 ﻿
 FC:\Users\utilisateur\source\repos\WPF\AgendaWPF\App.xaml;;
 FC:\Users\utilisateur\source\repos\WPF\AgendaWPF\MainWindow.xaml;;
+FC:\Users\utilisateur\source\repos\WPF\AgendaWPF\Views\AddAppointment.xaml;;
+FC:\Users\utilisateur\source\repos\WPF\AgendaWPF\Views\AddBroker.xaml;;
 FC:\Users\utilisateur\source\repos\WPF\AgendaWPF\Views\addCustomer.xaml;;
+FC:\Users\utilisateur\source\repos\WPF\AgendaWPF\Views\AppointmentsList.xaml;;
+FC:\Users\utilisateur\source\repos\WPF\AgendaWPF\Views\BrokersList.xaml;;
+FC:\Users\utilisateur\source\repos\WPF\AgendaWPF\Views\CustomersList.xaml;;
 

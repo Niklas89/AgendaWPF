@@ -1,0 +1,98 @@
+﻿<Page x:Class="AgendaWPF.Views.AddAppointment"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AgendaWPF.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800" d:Background="White"
+      Title="Ajout de rendez-vous">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Ajouter un rendez-vous" Style="{StaticResource Header}" />
+
+        <Grid Grid.Row="1" Margin="0 10 0 0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="100" />
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.Column="0" Content="Courtiers" />
+            <ComboBox Grid.Row="1" SelectedValue="{Binding Broker}"  Grid.Column="0" Margin="0 5 0 0" DisplayMemberPath="Lastname" SelectedValuePath="IdBroker" Name="BrokerName"  />
+
+            <Label Grid.Row="0" Grid.Column="1" Margin="10 0 0 0" Content="Clients" />
+            <ComboBox Grid.Row="1" SelectedValue="{Binding Customer}" Grid.Column="1" Margin="10 5 0 0" DisplayMemberPath="Lastname" SelectedValuePath="IdCustomer" Name="ClientName" />
+        </Grid>
+
+        <Grid Grid.Row="2" Margin="0 10 0 0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="100" />
+            </Grid.ColumnDefinitions>
+
+
+            <Label Grid.Row="0" Grid.ColumnSpan="2" Content="Date du rendez-vous" />
+            <DatePicker Grid.Row="1" Grid.ColumnSpan="2" Margin="0 5 0 0" Name="AppointmentDate" SelectedDateFormat="Long" />
+        </Grid>
+
+        <Grid Grid.Row="3" Margin="0 10 0 0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="100" />
+            </Grid.ColumnDefinitions>
+
+
+            <Label Grid.Row="0" Grid.Column="0" Content="Heure" />
+            <TextBox Grid.Row="1" Grid.Column="0" Margin="0 5 0 0" Name="AppointmentHour" Text="" />
+
+            <Label Grid.Row="0" Grid.Column="1" Content="Minutes" />
+            <TextBox Grid.Row="1" Grid.Column="1" Margin="10 5 0 0" Name="AppointmentMinute" Text="" />
+        </Grid>
+
+        <Grid Grid.Row="4" Margin="0 10 0 0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="100" />
+            </Grid.ColumnDefinitions>
+
+
+            <Label Grid.Row="0" Grid.ColumnSpan="2"  Content="Sujet du rdv" />
+            <TextBox Grid.Row="1" Grid.ColumnSpan="2" Margin="0 5 0 0" Name="AppointmentSubject" Text="" />
+
+        </Grid>
+
+        <StackPanel Grid.Row="5" x:Name="errorForm"></StackPanel>
+
+        <StackPanel Grid.Row="6" Margin="0 20 0 0" Orientation="Horizontal">
+            <Button Content="Enregistrer" Click="AddAppointment_Click" />
+            <Button Margin="10 0 0 0" Content="Annuler" Click="Cancel_Click" />
+
+        </StackPanel>
+        
+    </Grid>
+</Page>

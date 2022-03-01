@@ -1,0 +1,105 @@
+﻿<Page x:Class="AgendaWPF.Views.BrokersList"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AgendaWPF.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800" d:Background="White"
+      Title="Liste des courtiers">
+
+
+    <DockPanel>
+
+        <!--This StackPanel contains the slide in panel button on the right side-->
+        <StackPanel Name="buttonBar" Orientation="Horizontal" DockPanel.Dock="Right">
+            <StackPanel.LayoutTransform>
+                <RotateTransform Angle="90" />
+            </StackPanel.LayoutTransform>
+
+            <Button Name="btnOne" MouseEnter="btnOne_MouseEnter" Margin="0,0,5,0" Padding="10,1,10,1">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFFFE800" Offset="0" />
+                        <GradientStop Color="#FFFCFCFC" Offset="0.537" />
+                    </LinearGradientBrush>
+                </Button.Background> Modifier Courtier
+            </Button>
+
+        </StackPanel>
+
+        <Grid Name="parentGrid">
+            <!--list of all clients-->
+            <Grid Name="layer0" MouseEnter="layer0_MouseEnter">
+                <DataGrid Name = "dataGrid" AlternatingRowBackground = "LightBlue"  
+                 AlternationCount = "2" AutoGenerateColumns = "False">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header = "Lastname" Binding = "{Binding Lastname, Mode = TwoWay}" />
+                        <DataGridTextColumn Header = "Firstname" Binding = "{Binding Firstname, Mode = TwoWay}" />
+                        <DataGridTextColumn Header = "Mail" Binding = "{Binding Mail, Mode = TwoWay}" />
+                        <DataGridTextColumn Header = "PhoneNumber" Binding = "{Binding PhoneNumber, Mode = TwoWay}" />
+                        <DataGridTemplateColumn Header="View">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <Button Name="btnView" Content="View" Click="btnView_Click" />
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Grid>
+
+
+            <!--For panel1 dock window
+            This grid is the panel that appears when clicking on btnView--> 
+            <Grid Name="gridlayer1" Visibility="Collapsed">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition SharedSizeGroup="column1" Width="auto" />
+                </Grid.ColumnDefinitions>
+
+
+                <Grid Grid.Column="1"  Background="LightBlue">
+                    <!--MouseEnter="panel1_MouseEnter"-->
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <DockPanel Grid.Row="0">
+                        <Button Width="26" Name="panel1Pin" DockPanel.Dock="Right" Click="panel1Pin_Click" Background="White">
+                            <Image Name="panel1PinImg" Source="/Images/HorizontalPin.jpg" />
+                        </Button>
+
+
+                        <TextBlock Padding="25,8" TextTrimming="CharacterEllipsis" Foreground="Black" DockPanel.Dock="Left">Formulaire</TextBlock>
+
+                    </DockPanel>
+
+                    <ListBox Padding="10" Grid.Row="1" Name="listBoxForm">
+                        <StackPanel Name="errorForm"></StackPanel>
+                        <TextBox Height="23" Name="txtIdBroker" Visibility="Hidden" Width="50" IsReadOnly="True" />
+                        <ListBoxItem Content="Nom" />
+                        <TextBox Height="23" Name="txtLastname" Width="150" Text="" />
+                        <ListBoxItem Content="Prénom" />
+                        <TextBox Height="23" Name="txtFirstname" Width="150" Text="" />
+                        <ListBoxItem  Content="Email" />
+                        <TextBox Height="23" Name="txtMail" Width="150" Text="" />
+                        <ListBoxItem  Content="Tel" />
+                        <TextBox Height="23" Name="txtPhonenumber" Width="150" Text="" />
+                        <Button Content="Modifier" Click="Edit_Click"></Button>
+                        <Button Content="Supprimer" Click="Delete_Click"></Button>
+                    </ListBox>
+
+                </Grid>
+
+                <GridSplitter Width="5" Grid.Column="1" HorizontalAlignment="Left" />
+
+            </Grid>
+            <!--end gridlayer1-->
+
+        </Grid>
+        <!--end parentGrid-->
+    </DockPanel>
+</Page>

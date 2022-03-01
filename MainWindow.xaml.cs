@@ -23,6 +23,8 @@ namespace AgendaWPF
         public MainWindow()
         {
             InitializeComponent();
+            MainFrame.Navigate(new System.Uri("/Views/CustomersList.xaml",
+             UriKind.RelativeOrAbsolute));
         }
 
         private void AddCustomer_Click(object sender, RoutedEventArgs e)
@@ -31,5 +33,34 @@ namespace AgendaWPF
              UriKind.RelativeOrAbsolute));
         }
 
+        private void CustomersList_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new System.Uri("/Views/CustomersList.xaml",
+             UriKind.RelativeOrAbsolute));
+        }
+
+        private void AddBroker_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new System.Uri("/Views/AddBroker.xaml",
+             UriKind.RelativeOrAbsolute));
+        }
+
+        private void BrokersList_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new System.Uri("/Views/BrokersList.xaml",
+             UriKind.RelativeOrAbsolute));
+        }
+
+        private void AddAppointment_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new System.Uri("/Views/AddAppointment.xaml",
+             UriKind.RelativeOrAbsolute));
+        }
+
+        private void AppointmentsList_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new System.Uri("/Views/AppointmentsList.xaml",
+             UriKind.RelativeOrAbsolute));
+        }
     }
 }
